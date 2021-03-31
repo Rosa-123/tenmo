@@ -26,6 +26,7 @@ begin transaction;
 insert into transfers(transfer_type_id, transfer_status_id, account_from, account_to, amount) values(@transferType, @transferStatus, (select account_id from accounts where user_id = @senderId), (select account_id from accounts where user_id = @recId), @amount); 
 select @@IDENTITY;
 commit transaction";
+        //TODO: Finish implementing approve & reject options for requests 
         private const string SQL_APPROVEREQUEST = "";
         private const string SQL_REJECTREQUEST = "";
 
